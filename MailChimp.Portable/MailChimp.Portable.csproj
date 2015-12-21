@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E54A5AB7-AB38-4E82-8BD5-4A841CBB5232}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MailChimp.Portable</RootNamespace>
+    <AssemblyName>MailChimp.Portable</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Campaigns\Campaign.cs" />
+    <Compile Include="Campaigns\CampaignActionResult.cs" />
+    <Compile Include="Campaigns\CampaignAnalyticsOptions.cs" />
+    <Compile Include="Campaigns\CampaignContent.cs" />
+    <Compile Include="Campaigns\CampaignCreateContent.cs" />
+    <Compile Include="Campaigns\CampaignCreateOptions.cs" />
+    <Compile Include="Campaigns\CampaignCreateTrackingOptions.cs" />
+    <Compile Include="Campaigns\CampaignError.cs" />
+    <Compile Include="Campaigns\CampaignFilter.cs" />
+    <Compile Include="Campaigns\CampaignListResult.cs" />
+    <Compile Include="Campaigns\CampaignReadyCheckItem.cs" />
+    <Compile Include="Campaigns\CampaignReadyResult.cs" />
+    <Compile Include="Campaigns\CampaignScheduleDays.cs" />
+    <Compile Include="Campaigns\CampaignSegmentCriteria.cs" />
+    <Compile Include="Campaigns\CampaignSegmentOptions.cs" />
+    <Compile Include="Campaigns\CampaignSegmentTestResult.cs" />
+    <Compile Include="Campaigns\CampaignTrackingOptions.cs" />
+    <Compile Include="Campaigns\CampaignTypeAbsplitOptions.cs" />
+    <Compile Include="Campaigns\CampaignTypeAutoResponderOptions.cs" />
+    <Compile Include="Campaigns\CampaignTypeOptions.cs" />
+    <Compile Include="Campaigns\CampaignTypeRssOptions.cs" />
+    <Compile Include="Campaigns\CampaignUpdateError.cs" />
+    <Compile Include="Campaigns\CampaignUpdateResult.cs" />
+    <Compile Include="Ecomm\Order.cs" />
+    <Compile Include="Ecomm\OrderItem.cs" />
+    <Compile Include="Ecomm\OrderItemResult.cs" />
+    <Compile Include="Ecomm\OrderListResult.cs" />
+    <Compile Include="Ecomm\OrderResult.cs" />
+    <Compile Include="Errors\ApiError.cs" />
+    <Compile Include="Errors\MailChimpAPIException.cs" />
+    <Compile Include="Folders\FolderActionResult.cs" />
+    <Compile Include="Folders\FolderAddResult.cs" />
+    <Compile Include="Folders\FolderListResult.cs" />
+    <Compile Include="Gallery\AddGalleryFolderResult.cs" />
+    <Compile Include="Gallery\Gallery.cs" />
+    <Compile Include="Gallery\GalleryFolder.cs" />
+    <Compile Include="Gallery\GalleryFoldersResult.cs" />
+    <Compile Include="Gallery\GalleryListResult.cs" />
+    <Compile Include="Helper\AccountDetails.cs" />
+    <Compile Include="Helper\CampaignForEmail.cs" />
+    <Compile Include="Helper\ChimpChatterMessage.cs" />
+    <Compile Include="Helper\Contact.cs" />
+    <Compile Include="Helper\EmailParameter.cs" />
+    <Compile Include="Helper\FacebookProfile.cs" />
+    <Compile Include="Helper\InlineCss.cs" />
+    <Compile Include="Helper\Integration.cs" />
+    <Compile Include="Helper\ListForEmail.cs" />
+    <Compile Include="Helper\Match.cs" />
+    <Compile Include="Helper\Matches.cs" />
+    <Compile Include="Helper\Module.cs" />
+    <Compile Include="Helper\Order.cs" />
+    <Compile Include="Helper\PingMessage.cs" />
+    <Compile Include="Helper\Rewards.cs" />
+    <Compile Include="Helper\VerifiedDomain.cs" />
+    <Compile Include="Lists\AbuseReport.cs" />
+    <Compile Include="Lists\AbuseResult.cs" />
+    <Compile Include="Lists\AddCampaignSegmentOptions.cs" />
+    <Compile Include="Lists\BatchEmailParameter.cs" />
+    <Compile Include="Lists\BatchSubscribeResult.cs" />
+    <Compile Include="Lists\BatchUnsubscribeResult.cs" />
+    <Compile Include="Lists\Client.cs" />
+    <Compile Include="Lists\CompleteResult.cs" />
+    <Compile Include="Lists\Grouping.cs" />
+    <Compile Include="Lists\InterestGrouping.cs" />
+    <Compile Include="Lists\InterestGroupingResult.cs" />
+    <Compile Include="Lists\ListActivity.cs" />
+    <Compile Include="Lists\ListError.cs" />
+    <Compile Include="Lists\ListFilter.cs" />
+    <Compile Include="Lists\ListInfo.cs" />
+    <Compile Include="Lists\ListResult.cs" />
+    <Compile Include="Lists\MCLocation.cs" />
+    <Compile Include="Lists\MCNote.cs" />
+    <Compile Include="Lists\MemberActivity.cs" />
+    <Compile Include="Lists\MemberActivityItem.cs" />
+    <Compile Include="Lists\MemberActivityResult.cs" />
+    <Compile Include="Lists\MemberGeo.cs" />
+    <Compile Include="Lists\MemberInfo.cs" />
+    <Compile Include="Lists\MemberInfoResult.cs" />
+    <Compile Include="Lists\MemberNote.cs" />
+    <Compile Include="Lists\MembersResult.cs" />
+    <Compile Include="Lists\MergeVar.cs" />
+    <Compile Include="Lists\MergeVarError.cs" />
+    <Compile Include="Lists\MergeVarItemResult.cs" />
+    <Compile Include="Lists\MergeVarListResult.cs" />
+    <Compile Include="Lists\MergeVarOptions.cs" />
+    <Compile Include="Lists\MergeVarResult.cs" />
+    <Compile Include="Lists\SavedSegmentResult.cs" />
+    <Compile Include="Lists\SegmentAddResult.cs" />
+    <Compile Include="Lists\SegmentResult.cs" />
+    <Compile Include="Lists\StaticSegment.cs" />
+    <Compile Include="Lists\StaticSegmentActionResult.cs" />
+    <Compile Include="Lists\StaticSegmentAddResult.cs" />
+    <Compile Include="Lists\StaticSegmentMembersAddResult.cs" />
+    <Compile Include="Lists\StaticSegmentMembersDeleteResult.cs" />
+    <Compile Include="Lists\StaticSegmentResult.cs" />
+    <Compile Include="Lists\SubscriberLocation.cs" />
+    <Compile Include="Lists\UnsubscribeResult.cs" />
+    <Compile Include="Lists\WebhookActions.cs" />
+    <Compile Include="Lists\WebhookAddResult.cs" />
+    <Compile Include="Lists\WebhookInfo.cs" />
+    <Compile Include="Lists\WebhookSources.cs" />
+    <Compile Include="MailChimpExportManager.cs" />
+    <Compile Include="MailChimpManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Absplit.cs" />
+    <Compile Include="Reports\BounceMessages.cs" />
+    <Compile Include="Reports\ClickDetail.cs" />
+    <Compile Include="Reports\Clicks.cs" />
+    <Compile Include="Reports\CommonOptions.cs" />
+    <Compile Include="Reports\Industry.cs" />
+    <Compile Include="Reports\NotOpened.cs" />
+    <Compile Include="Reports\Opened.cs" />
+    <Compile Include="Reports\ReportSummary.cs" />
+    <Compile Include="Reports\SentTo.cs" />
+    <Compile Include="Reports\Timeseries.cs" />
+    <Compile Include="Reports\Timewarp.cs" />
+    <Compile Include="Reports\Unsubscribes.cs" />
+    <Compile Include="SingleArrayValueConverter.cs" />
+    <Compile Include="Templates\TemplateAddResult.cs" />
+    <Compile Include="Templates\TemplateDeleteResult.cs" />
+    <Compile Include="Templates\TemplateFilters.cs" />
+    <Compile Include="Templates\TemplateInformationResult.cs" />
+    <Compile Include="Templates\TemplateListInfo.cs" />
+    <Compile Include="Templates\TemplateListResult.cs" />
+    <Compile Include="Templates\TemplateTypes.cs" />
+    <Compile Include="Templates\TemplateUndeleteResult.cs" />
+    <Compile Include="Templates\TemplateUpdateResult.cs" />
+    <Compile Include="Templates\TemplateUpdateValue.cs" />
+    <Compile Include="Users\UserActionResult.cs" />
+    <Compile Include="Users\UserInvite.cs" />
+    <Compile Include="Users\UserLoginsResult.cs" />
+    <Compile Include="Users\UserProfile.cs" />
+    <Compile Include="Webhooks\CleanedWebhookData.cs" />
+    <Compile Include="Webhooks\CleanedWebhookResult.cs" />
+    <Compile Include="Webhooks\UnsubscribeWebhookData.cs" />
+    <Compile Include="Webhooks\UnsubscribeWebhookResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="VIP\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
