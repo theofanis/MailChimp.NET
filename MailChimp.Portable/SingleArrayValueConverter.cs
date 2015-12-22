@@ -19,12 +19,15 @@ namespace MailChimp
             object retVal = new Object();
             if (reader.TokenType == JsonToken.StartObject)
             {
-                T instance = (T)serializer.Deserialize(reader, typeof(T));
-                retVal = new List<T>() { instance };
+                retVal = (T)serializer.Deserialize(reader, typeof(T));
             }
             else if (reader.TokenType == JsonToken.StartArray)
             {
-                retVal = serializer.Deserialize(reader, objectType);
+                // Let the reader deserialize to go past the empty array
+                // And return null since we are expecting an object
+                // But the response is malformed and contained and empty array
+                var res = serializer.Deserialize(reader, typeof(T[]));
+                retVal = null;
             }
             return retVal;
         }
