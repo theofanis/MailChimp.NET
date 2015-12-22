@@ -210,7 +210,7 @@ namespace MailChimp.Lists
             public double ClickRate { get; set; }
 
             [JsonProperty("date_last_campaign")]
-            public System.DateTime DateLastCampaign { get; set; }
+            public System.DateTime? DateLastCampaign { get; set; }
         }
 
     }
